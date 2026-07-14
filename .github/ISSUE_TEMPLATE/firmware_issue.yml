@@ -1,0 +1,42 @@
+name: Firmware issue
+description: Report a build, flashing, boot, driver, or runtime problem
+title: "[Firmware] "
+labels:
+  - area:firmware
+  - needs-triage
+body:
+  - type: input
+    id: revision
+    attributes:
+      label: Hardware revision
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Firmware commit or release
+    validations:
+      required: true
+  - type: input
+    id: toolchain
+    attributes:
+      label: SDK, compiler, and operating system
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps and commands
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Complete build or runtime logs
+  - type: checkboxes
+    id: secrets
+    attributes:
+      label: Data check
+      options:
+        - label: I removed passwords, keys, certificates, and personal information.
+          required: true
